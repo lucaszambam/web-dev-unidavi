@@ -6,6 +6,7 @@
       <option value="1">Exercício 01</option>
       <option value="2">Exercício 02</option>
       <option value="3">Exercício 03</option>
+      <option value="4">Exercício 04</option>
     </select>
   </div>
 
@@ -24,6 +25,10 @@
     <div :class="{ active: this.exercise == 3 }">
       <Exercise03 />
     </div>
+
+    <div :class="{ active: this.exercise == 4 }">
+      <Exercise04 />
+    </div>
   </div>
 
   <div class="github-repo">
@@ -37,13 +42,17 @@
 import ProductTable from './components/ProductTable.vue'
 import Exercise01 from './components/Exercise01.vue'
 import Exercise02 from './components/Exercise02.vue'
+import Exercise03 from './components/Exercise03.vue'
+import Exercise04 from './components/Exercise04.vue'
 
 export default {
   name: 'App',
   components: {
     ProductTable,
     Exercise01,
-    Exercise02
+    Exercise02,
+    Exercise03,
+    Exercise04
   },
   data() {
     return {
