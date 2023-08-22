@@ -2,13 +2,13 @@
   <div>
     <span>Selecione o exercício:</span>
     <select name="Selecione o Exercício" @change="onChangeSelect($event)">
-      <option v-for="index in this.numberOfComponents" :value="index - 1">Exercício 0{{ index - 1 }}</option>
+      <option v-for="index in this.numberOfComponents" :value="index - 1">Exercício {{ ((index - 1) < 10 ? '0' + (index - 1) : (index - 1)) }}</option>
     </select>
   </div>
 
   <div class="exercise-container">
     <div v-for="index in this.numberOfComponents" :class="{ active: this.exercise == index - 1 }">
-      <component :is="'Exercise0' + (index - 1) "></component>
+      <component :is="'Exercise' + ((index - 1) < 10 ? '0' + (index - 1) : (index - 1)) "></component>
     </div>
     
   </div>
@@ -29,6 +29,11 @@ import Exercise04 from './components/Exercise04.vue'
 import Exercise05 from './components/Exercise05.vue'
 import Exercise06 from './components/Exercise06.vue'
 import Exercise07 from './components/Exercise07.vue'
+import Exercise08 from './components/Exercise08.vue'
+import Exercise09 from './components/Exercise09.vue'
+import Exercise10 from './components/Exercise10.vue'
+import Exercise11 from './components/Exercise11.vue'
+import Exercise12 from './components/Exercise12.vue'
 
 export default {
   name: 'App',
@@ -40,7 +45,12 @@ export default {
     Exercise04,
     Exercise05,
     Exercise06,
-    Exercise07
+    Exercise07,
+    Exercise08,
+    Exercise09,
+    Exercise10,
+    Exercise11,
+    Exercise12
   },
   data() {
     return {
