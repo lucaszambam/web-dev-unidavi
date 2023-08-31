@@ -40,6 +40,10 @@ import Exercise15 from './components/Exercise15.vue'
 import Exercise16 from './components/Exercise16.vue'
 import Exercise17 from './components/Exercise17.vue'
 import Exercise18 from './components/Exercise18.vue'
+import Exercise19 from './components/Exercise19.vue'
+import Exercise20 from './components/Exercise20.vue'
+import Exercise21 from './components/Exercise21.vue'
+import Exercise22 from './components/Exercise22.vue'
 
 export default {
   name: 'App',
@@ -62,7 +66,11 @@ export default {
     Exercise15,
     Exercise16,
     Exercise17,
-    Exercise18
+    Exercise18,
+    Exercise19,
+    Exercise20,
+    Exercise21,
+    Exercise22
   },
   data() {
     return {
